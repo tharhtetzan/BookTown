@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="bookList" class="com.book.BookAction">
+			<result name="success">HomePage.jsp</result>
+			<result name="input">Login_Signup.jsp</result>
+		</action>
+		<action name="loginCheck" class="com.book.UserAction">
+			<result name="success">Welcome.jsp</result>
+			<result name="input">Login_Signup.jsp</result>
+		</action>
+		<action name="profilepageshow" class="com.book.ListShow" method="showProfile">
+			<result name="success">ProfilePage.jsp</result>
+			<result name="input">HomePage.jsp</result>
+		</action>
+		<action name="SignUp" class="com.book.Signupaction" method="signup">
+			<result name="success">Welcome.jsp</result>
+			<result name="input">Login_Signup.jsp</result>
+		</action>
+		<action name="BookSell" class="com.book.BookSell">
+			<result name="success">SellSuccess.jsp</result>
+			<result name="input">BookSell.jsp</result>
+		</action>
+		<action name="BookBuy" class="com.book.BookAction" method="bookbuy">
+			<result name="success">BookBuy.jsp</result>
+			<result name="input">HomePage.jsp</result>
+		</action>
+		<action name="BuyRequest" class="com.book.BookAction" method="buyrequest">
+			<result name="success">BuyConfirm.jsp</result>
+			<result name="input">BookBuy.jsp</result>
+		</action>
+		<action name="UserConfirm" class="com.book.UserAction" method="userconfirm">
+			<result name="success">Vouncher.jsp</result>
+			<result name="input">BuyConfirm.jsp</result>
+		</action>
+		<action name="history" class="com.book.HistoryAction">
+			<result name="success">History.jsp</result>
+			<result name="input">HomePage.jsp</result>
+		</action>
+		<action name="Vouncher" class="com.book.HistoryAction" method="vouncher">
+			<result name="success">Vouncher.jsp</result>
+			<result name="input">Vouncher.jsp</result>
+		</action>
+		<action name="Search" class="com.book.BookAction" method="search">
+			<result name="success">Search_result.jsp</result>
+			<result name="input">Homepage.jsp</result>
+		</action>
+		<action name="ToSearch" class="com.book.BookAction" method="tosearch">
+			<result name="success">Search_result.jsp</result>
+			<result name="input">Homepage.jsp</result>
+		</action>
+	</package>
+</struts> 
