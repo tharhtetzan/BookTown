@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name = "adminbookSelect" class = "booktown.BookController">
+			<result name = "success">AdminBookList.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookUpdate" class = "booktown.BookController" method = "updateBookInput">
+			<result name = "success">inputUpdateBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookConfirmUpdate" class = "booktown.BookController" method = "updateBookConfirm">
+			<result name = "success">confirmUpdateBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name="bookComplete" class="booktown.BookController" method="updateBookComplete">
+			<result name="success">completeUpdateBook.jsp</result>
+			<result name="input">Main.jsp</result>
+		</action>
+		
+		<action name = "bookDelete" class = "booktown.BookController" method = "deleteBookInput">
+			<result name = "success">inputDeleteBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookConfirmDelete" class = "booktown.BookController" method = "deleteBookConfirm">
+			<result name = "success">confirmDeleteBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookCompleteDelete" class = "booktown.BookController" method = "deleteBookComplete">
+			<result name = "success">completeDeleteBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookAdd" class = "booktown.BookController" method = "addBookInput">
+			<result name = "success">inputAddBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookConfirmAdd" class = "booktown.BookController" method = "addBookConfirm">
+			<result name = "success">confirmAddBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "bookCompleteAdd" class = "booktown.BookController" method = "addBookComplete">
+			<result name = "success">completeAddBook.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "adminuserSelect" class = "booktown.UserController">
+			<result name = "success">AdminUserList.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "adminsellSelect" class = "booktown.SellController">
+			<result name = "success">AdminSellList.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+		<action name = "admintransectionSelect" class = "booktown.TransectionController">
+			<result name = "success">AdminTransectionList.jsp</result>
+			<result name = "error">Main.jsp</result>
+		</action>
+	</package>
+</struts>
